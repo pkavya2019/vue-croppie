@@ -1480,11 +1480,10 @@
 	        _updateZoomLimits.call(self);
 		    
 		 // Reverses image dimensions if the degrees of rotation is not divisible by 180.
-		if ((Math.abs(deg) / 90) % 2 === 1) {
-		    let oldHeight = self._originalImageHeight;
-		    let oldWidth = self._originalImageWidth;
-		    self._originalImageWidth = oldHeight;
-		    self._originalImageHeight = oldWidth;
+		if ((deg % 180) !== 0) {
+		    var lastOriginalHeight = this._originalImageHeight;
+		    this._originalImageHeight = this._originalImageWidth;
+		    this._originalImageWidth = lastOriginalHeight;
 		}
 	    }
 
