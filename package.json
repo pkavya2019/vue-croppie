@@ -12,16 +12,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jofftiquez/vue-croppie.git"
+    "url": "https://github.com/pkavya2019/vue-croppie.git"
   },
-  "author": "jofftiquez@gmail.com",
+  "author": "Praveen Sharma",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jofftiquez/vue-croppie/issues"
   },
   "homepage": "https://github.com/jofftiquez/vue-croppie#readme",
-  "dependencies": {
-    "croppie": "^2.6.4"
+  "dependencies": { 
+    "croppie": "git+https://github.com/pkavya2019/Croppie"
   },
   "devDependencies": {
     "bili": "^3.4.2"
