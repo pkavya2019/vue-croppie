@@ -1230,7 +1230,7 @@
 	            dHeight = (sHeight / height) * canvasHeight;
 	        }
 
-	        // console.table({ left, right, top, bottom, canvasWidth, canvasHeight, width, height, startX, startY, circle, sx, sy, dx, dy, sWidth, sHeight, dWidth, dHeight });
+	         console.table({ left, right, top, bottom, canvasWidth, canvasHeight, width, height, startX, startY, circle, sx, sy, dx, dy, sWidth, sHeight, dWidth, dHeight });
 
 	        ctx.drawImage(this.elements.preview, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
 	        if (circle) {
@@ -1478,6 +1478,12 @@
 	        drawCanvas(canvas, self.elements.img, self.data.orientation);
 	        _updateCenterPoint.call(self, true);
 	        _updateZoomLimits.call(self);
+		    
+		if ((deg % 180) !== 0) {
+			var lastOriginalHeight = this._originalImageHeight;
+			this._originalImageHeight = this._originalImageWidth;
+			this._originalImageWidth = lastOriginalHeight;
+		}
 	    }
 
 	    function _destroy() {
